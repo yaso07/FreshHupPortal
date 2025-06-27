@@ -18,7 +18,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-    if(isLoggedIn)
+    
      checkAuthStatus()
   }, [isLoggedIn])
   const toastId=12
@@ -34,6 +34,11 @@ function App() {
     
       if(response?.message!="success")
       { 
+        console.log(response.message?.includes('authorization denied'),response.message)
+        if(response.message?.includes('authorization denied'))
+        {
+          return
+        }
          if(!toast.isActive(toastId))
          toast.warning(response?.message,{toastId})
       }

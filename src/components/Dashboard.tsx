@@ -180,8 +180,8 @@ console.log(configs)
             <h3 className="text-lg font-medium text-gray-900 mb-2">Configuration Required</h3>
             <p className="text-gray-500">Please configure your API credentials to view the dashboard</p>
              <div className="text-left">
-               <p className="text-gray-500">Step1 : <span className="text-blue-800">Add your Freshdesk Credentials</span> </p>
-            <p className="text-gray-500">Step2 : <span className="text-blue-800">Add your Hubspot token</span></p>
+               <p className="text-gray-500">Step1 : <span className="text-blue-800">Add your freshdesk credentials</span> </p>
+            <p className="text-gray-500">Step2 : <span className="text-blue-800">Add your hubspot token</span></p>
              </div>
           </div>
         </div>

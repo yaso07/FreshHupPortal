@@ -42,7 +42,7 @@ class ApiService {
       }
     }
   }
- 
+ //auth
   async register(userData: { name: string; email: string; password: string }) {
     const res = await this.request<{ token: string; user: any }>({
       url: "/register",
@@ -78,7 +78,7 @@ class ApiService {
     return this.request<{ user: any }>({ url: "/user" })
   }
 
-  
+  //fresh desk api
   updateFreshdesk(config: { apiKey: string; domain: string }) {
     return this.request({ url: "/freshdesk", method: "POST", data: config })
   }
@@ -95,7 +95,7 @@ class ApiService {
     return this.request({ url: `/freshdesk/tickets/${ticketId}/conversations` })
   }
 
-  
+  //hupspot
   updateHubspot(config: { token: string }) {
     return this.request({ url: "/hubspot", method: "POST", data: config })
   }
@@ -112,7 +112,7 @@ class ApiService {
       return await this.request({url:`/freshdesk/contacts/${requestedId}`})
   }
 
- 
+ //webhook
   getWebhookLogs() {
     return this.request({ url: "/webhook/logs" })
   }
