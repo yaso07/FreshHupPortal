@@ -3,7 +3,7 @@ import axios, { type AxiosInstance, type AxiosRequestConfig } from "axios"
 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api"
 
 interface ApiResponse<T = any> {
-  user?: any
+  user?: any|T
   success?: boolean
   data?: any
   message?: string
@@ -13,7 +13,7 @@ interface ApiResponse<T = any> {
 
 class ApiService {
   private axiosInstance: AxiosInstance
-  private token: string 
+  private token: string |any
 
   constructor() {
     this.token = typeof window !== "undefined" ? localStorage.getItem("auth_token") : null
